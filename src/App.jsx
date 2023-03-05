@@ -1,29 +1,57 @@
-import {BsFillMoonStarsFill} from 'react-icons/bs';
-import styles from './style';
-import { font_size } from './style';
+import {BsFillMoonStarsFill, BsGithub} from 'react-icons/bs';
+import {SiLinkedin} from 'react-icons/si'
+import {styles, font_style, spacing, hover, bg_style, img_styling } from './style';
 
 function App() {
   
   return (
-    <div className='font-quicksand'>
-      <main className='bg-slate-100'>
-        <section> 
-          <nav className='flex items-center justify-between py-1 text-slate-100 font-semibold text-xl bg-cyan-700 '>
-            <h1 className={`${font_size.title}`}>Isaac Portfolio</h1>
-            <ul className="flex items-center gap-2 sm:gap-2 font-normal">
-              <li className={`${styles.hover_navbar} ${font_size.navbar}`}>Home</li>
-              <li className={`${styles.hover_navbar} ${font_size.navbar}`}>About me</li>
-              <li className={`${styles.hover_navbar} ${font_size.navbar}`}>Projects</li>
-              <li className={`${styles.hover_navbar} ${font_size.navbar}`}><a href="#">Resume</a></li>
-              <li className={`${styles.hover_navbar} ${font_size.navbar}`}>Contact me</li>
-              <li className={`${styles.hover_navbar} ${font_size.navbar}`}><BsFillMoonStarsFill/></li>
+    <div className={`${styles.font_family}`}>
+      <main>
+        <section>
+          <nav className={`${spacing.nav} ${bg_style.nav}`}>
+            <h1 className={`${font_style.h1}`}>Isaac Portfolio</h1>
+            <ul className={`${font_style.nav_ul} ${spacing.nav_ul} ${hover.nav_links}`}>
+              <li>Home</li>
+              <li>Projects</li>
+              <li>About</li>
+              <li>
+                <a href="#">Resume</a>
+              </li>
+              <li>Contact Me</li>
+              <li><BsFillMoonStarsFill/></li>
             </ul>
           </nav>
         </section>
-        <section className='flex items-center justify-left mx-auto'>
-          <img className=' w-60 h-60 bg-cyan-700 p-1 object-cover overflow-hidden m-5 rounded-full' src="/src/assets/photo.jpg" alt="Image of Isaac"  />
-          <h1 className={`${font_size.h1}`}>Hi, I'm Isaac Guzman.</h1>
-          <h1 className={`${font_size.h1}`}>I'm a front-end developer</h1>
+        <section>
+          <div>
+            <img className={`${img_styling.photo} ${spacing.photo} `} src="/src/assets/photo.jpg" alt="Photo of Isaac" />
+            <h2 className={`${font_style.h2} ${spacing.hero_h2}`}>Isaac Guzmán</h2>
+            <h3 className={`${font_style.h3}`}>Front End Developer</h3>
+            <p className={`${font_style.p}`}>
+              Found me in:
+            </p>
+          </div>
+          <div>
+            <SiLinkedin />
+            <BsGithub />
+          </div>
+        </section>
+        <section>
+          <div>
+            <h2 className={`${font_style.h2}`}>Here you can find my projects:</h2>
+          </div>
+        </section>
+        <section>
+          <div>
+            <h2 className={`${font_style.h2}`}>About me</h2>
+            <p className={`${font_style.p}`}>I'm a mechatronic engineer</p>
+          </div>
+        </section>
+        <section>
+          <h2 className={`${font_style.h2}`}>Contact me</h2>
+          <form action="">
+
+          </form>
         </section>
       </main>
     </div>

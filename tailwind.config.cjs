@@ -8,6 +8,10 @@ module.exports = {
     extend: {
       fontFamily: {
         quicksand: ['Quicksand','sans-serif']
+      },
+      colors: {
+      'marine-blue': '#314755',
+      'sky-blue': '#26A0DA'
       }
     },
   },
