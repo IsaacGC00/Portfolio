@@ -9,7 +9,7 @@ function App() {
       <main>
         <section>
           <nav className={`${spacing.nav} ${bg_style.nav}`}>
-            <h1 className={`${font_style.h1}`}>Isaac Portfolio</h1>
+            <h1 className={`${font_style.h1} ${spacing.nav_namepage}`}>Isaac Portfolio</h1>
             <ul className={`${font_style.nav_ul} ${spacing.nav_ul} ${hover.nav_links}`}>
               <li>Home</li>
               <li>Projects</li>
@@ -22,26 +22,35 @@ function App() {
             </ul>
           </nav>
         </section>
-        <section>
+        <section className={`${spacing.hero}`}>
           <div>
-            <img className={`${img_styling.photo} ${spacing.photo} `} src="/src/assets/photo.jpg" alt="Photo of Isaac" />
-            <h2 className={`${font_style.h2} ${spacing.hero_h2}`}>Isaac Guzmán</h2>
+            <img className={`${img_styling.photo} ${spacing.photo}`} 
+            src="/src/assets/photo.jpg" 
+            alt="Photo of Isaac"/>
+          </div>
+          <div className={`${bg_style.line}`}></div>
+          <div>
+            <h2 className={`${font_style.h2}`}>Isaac Guzmán</h2>
             <h3 className={`${font_style.h3}`}>Front End Developer</h3>
             <p className={`${font_style.p}`}>
               Found me in:
             </p>
-          </div>
-          <div>
-            <SiLinkedin />
-            <BsGithub />
+            <div className={`${font_style.icons} ${spacing.icons} ${hover.icons}`}>
+              <a href="https://www.linkedin.com/in/aisaacgc" target='_blank'><SiLinkedin /></a>
+              <a href="https://github.com/IsaacGC00" target='_blank'><BsGithub /></a>
+            </div>
+            <h2>Scroll down to see my projects</h2>
           </div>
         </section>
-        <section>
+        <section className={`${spacing.project_section}`}>
           <div>
             <h2 className={`${font_style.h2}`}>Here you can find my projects:</h2>
           </div>
+          <div className=''>
+
+          </div>
         </section>
-        <section>
+        <section className={`${spacing.about}`}>
           <div>
             <h2 className={`${font_style.h2}`}>About me</h2>
             <p className={`${font_style.p}`}>I'm a mechatronic engineer</p>
